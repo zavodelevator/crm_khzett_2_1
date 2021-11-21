@@ -1,0 +1,9 @@
+tables      
+  | 
+  |  
+1.client       2. the act of sending the goods       3. reestr operation           
+
+
+1.1 rails g controlle home index
+1.2 rails g scaffold Customer customer_name:string contact_person:string adress_custommer:string edrpou:string email:string website:string note:string dev_date:string
+
