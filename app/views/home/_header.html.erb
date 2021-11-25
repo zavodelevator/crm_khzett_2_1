@@ -19,8 +19,16 @@
       </form>
 
       <div class="text-end" >
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+
+        <%if user_signed_in? %>
+          <button type="button" class="btn bbtn-warning"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></button>
+          <button type="button" class="btn bbtn-warning"><%= link_to 'Edit user', edit_user_registration_path %></button>
+       
+        <%else%>
+          <button type="button" class="btn bbtn-warning"><%= link_to 'Sign in', new_user_session_path %></button>
+          <button type="button" class="btn btn-warning"><%= link_to 'Sign up', new_user_registration_path %></button>
+        <%end%>
+        
       </div>
     </div>
   </div>
