@@ -47,13 +47,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :dev_date %>
-    <%= form.text_field :dev_date %>
+    
+    <%= form.text_field :dev_date, type: :hidden %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, placeholder: "User id", value: current_user.id %>
+    
+    <%= form.number_field :user_id, id: :customer_user_id, placeholder: "User id",
+    value: current_user.id, type: :hidden %>
   </div>
 
 

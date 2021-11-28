@@ -7,3 +7,7 @@ tables
 1.1 rails g controlle home index
 1.2 rails g scaffold Customer customer_name:string contact_person:string adress_custommer:string edrpou:string email:string website:string note:string dev_date:string
 
+1.3 rails db:migrate
+
+
+rails g migration add_user_id_to_customers user_id:integer:index
