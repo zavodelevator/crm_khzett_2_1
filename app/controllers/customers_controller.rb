@@ -1,6 +1,8 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: %i[ show edit update destroy ]
   before_action :authenticate_user!,except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
 
   # GET /customers or /customers.json
   def index
@@ -13,7 +15,8 @@ class CustomersController < ApplicationController
 
   # GET /customers/new
   def new
-    @customer = Customer.new
+    # @customer = Customer.new
+    @customer = current_user.customer.build
   end
 
   # GET /customers/1/edit
@@ -22,7 +25,8 @@ class CustomersController < ApplicationController
 
   # POST /customers or /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    # @customer = Customer.new(customer_params)
+    @customer = current_user.customer.build(customer_params)
 
     respond_to do |format|
       if @customer.save
@@ -57,11 +61,16 @@ class CustomersController < ApplicationController
     end
   end
 
+  def correct_user
+    @customer = current_user.customers.find_by(id: params[:id])
+    redirect_to customers_path, notice: "Not authorized to edit this cuctomer" if @customer.nil? 
+  end
+  
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_customer
-      @customer = Customer.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_customer
+    @customer = Customer.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
     def customer_params
