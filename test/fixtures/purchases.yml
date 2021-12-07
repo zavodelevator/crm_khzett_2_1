@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_product: MyString
+  count_price_params: MyString
+  stage_buy: MyString
+  stage_in_corp: MyString
+  plus_info: MyString
+  customer: one
+
+two:
+  name_product: MyString
+  count_price_params: MyString
+  stage_buy: MyString
+  stage_in_corp: MyString
+  plus_info: MyString
+  customer: two

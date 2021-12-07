@@ -10,3 +10,14 @@ tables ------------------------------------------------\
 
 rails g migration add_user_id_to_customers user_id:integer:index
 
+
+
+$ bundle outdate
+$ bundle update
+
+$ yarn add bootstrap
+$ yarn upgrate
+
+
+add controller
+$ rails g model Purchase name_product:string count_price_params:string stage_buy:string stage_in_corp:string plus_info:string customer:belongs_to

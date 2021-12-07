@@ -10,13 +10,15 @@ class CustomersController < ApplicationController
   end
 
   # GET /customers/1 or /customers/1.json
+  
   def show
+    @purchase = @customer.purchases.build
   end
 
   # GET /customers/new
   def new
     # @customer = Customer.new
-    @customer = current_user.customer.build
+    @customer = current_user.customers.build
   end
 
   # GET /customers/1/edit
@@ -26,7 +28,7 @@ class CustomersController < ApplicationController
   # POST /customers or /customers.json
   def create
     # @customer = Customer.new(customer_params)
-    @customer = current_user.customer.build(customer_params)
+    @customer = current_user.customers.build(customer_params)
 
     respond_to do |format|
       if @customer.save

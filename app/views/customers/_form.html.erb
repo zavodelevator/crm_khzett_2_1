@@ -12,38 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :customer_name %>
-    <%= form.text_field :customer_name %>
+    <%= form.text_field :customer_name, class: "form-control", placeholder: "customer name" %>
   </div>
 
   <div class="field">
-    <%= form.label :contact_person %>
-    <%= form.text_field :contact_person %>
+  
+    <%= form.text_field :contact_person, class: "form-control", placeholder:"Contact person" %>
   </div>
 
   <div class="field">
-    <%= form.label :adress_custommer %>
-    <%= form.text_field :adress_custommer %>
+    <%= form.text_field :adress_custommer, class: "form-control", placeholder:"Address" %>
   </div>
 
   <div class="field">
-    <%= form.label :edrpou %>
-    <%= form.text_field :edrpou %>
+    <%= form.text_field :edrpou, class: "form-control", placeholder:"ederpou" %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control", placeholder:"email" %>
   </div>
 
   <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website %>
+    <%= form.text_field :website, class: "form-control", placeholder:"website" %>
   </div>
 
   <div class="field">
-    <%= form.label :note %>
-    <%= form.text_field :note %>
+    <%= form.text_field :notebtn, class: "form-control", placeholder:"note" %>
   </div>
 
   <div class="field">
@@ -52,13 +46,12 @@
   </div>
 
   <div class="field">
-    
-    <%= form.number_field :user_id, id: :customer_user_id, placeholder: "User id",
+    <%= form.number_field :user_id, id: :customer_user_id, placeholder: "User id", 
     value: current_user.id, type: :hidden %>
   </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary btn-sm" %>
   </div>
 <% end %>
