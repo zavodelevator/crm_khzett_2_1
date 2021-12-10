@@ -47,27 +47,49 @@
 
 </div>
 
+<hr class "mg-3"></hd>
+
+<h2>Write new purchase</h2>
+
 <%= form_with model: [@customer, @purchase] do |f|%>
  
   <div>
-    <%= f.text_area :name_product, placeholder: "product name"%>
+    <%= f.text_area :name_product, placeholder: "product name", class: "form-control"%>
   </div>
 
   <div>
-    <%= f.text_area :count_price_params, placeholder: "params price"%>
+    <%= f.text_area :count_price_params, placeholder: "params price", class: "form-control"%>
   </div>
 
   <div>
-    <%= f.text_area :stage_buy, placeholder: "stage buy"%>
+    <%= f.text_area :stage_buy, placeholder: "stage buy", class: "form-control"%>
   </div>
 
   <div>
-    <%= f.text_area :stage_in_corp, placeholder: "stage in corp"%>
+    <%= f.text_area :stage_in_corp, placeholder: "stage in corp", class: "form-control"%>
   </div>  
 
   <div>
-    <%= f.text_area :plus_info, placeholder: "plus info"%>
+    <%= f.text_area :plus_info, placeholder: "plus info", class: "form-control"%>
   </div>  
 
+  <div>
+    <%= f.submit "Submit Ansver", class: "btn btn-primary"%>
+  </div>  
 
 <% end %>
+
+
+<h2>Purchases</h2>
+
+  <% @purchases.each do |purchase| %>
+    
+    <time datetime= "<% purchase.formated_created_at %>">
+      <%= purchase.formated_created_at %>
+    </time>
+
+    <p>
+      <%= purchase.name_product%>
+    </p>
+
+  <% end %>

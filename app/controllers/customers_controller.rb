@@ -13,6 +13,9 @@ class CustomersController < ApplicationController
   
   def show
     @purchase = @customer.purchases.build
+
+    @purchases = Purchase.order created_at: :desc
+
   end
 
   # GET /customers/new

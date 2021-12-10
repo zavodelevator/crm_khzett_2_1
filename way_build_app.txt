@@ -21,3 +21,5 @@ $ yarn upgrate
 
 add controller
 $ rails g model Purchase name_product:string count_price_params:string stage_buy:string stage_in_corp:string plus_info:string customer:belongs_to
+
+******** need create erorr parshall lassov 5 18:17  
