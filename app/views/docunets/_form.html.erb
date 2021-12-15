@@ -1,0 +1,32 @@
+<%= form_with(model: docunet) do |form| %>
+  <% if docunet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(docunet.errors.count, "error") %> prohibited this docunet from being saved:</h2>
+
+      <ul>
+        <% docunet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_document %>
+    <%= form.text_field :name_document %>
+  </div>
+
+  <div class="field">
+    <%= form.label :second_column %>
+    <%= form.text_field :second_column %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_field :note %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

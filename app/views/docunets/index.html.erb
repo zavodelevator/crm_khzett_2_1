@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Docunets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name document</th>
+      <th>Second column</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @docunets.each do |docunet| %>
+      <tr>
+        <td><%= docunet.name_document %></td>
+        <td><%= docunet.second_column %></td>
+        <td><%= docunet.note %></td>
+        <td><%= link_to 'Show', docunet %></td>
+        <td><%= link_to 'Edit', edit_docunet_path(docunet) %></td>
+        <td><%= link_to 'Destroy', docunet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Docunet', new_docunet_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_07_175715) do
+ActiveRecord::Schema.define(version: 2021_12_15_081632) do
 
   create_table "customers", force: :cascade do |t|
     t.string "customer_name"
@@ -25,6 +25,29 @@ ActiveRecord::Schema.define(version: 2021_12_07_175715) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
+  end
+
+  create_table "docunets", force: :cascade do |t|
+    t.string "name_document"
+    t.string "second_column"
+    t.string "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "piples", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "parens_name"
+    t.string "email"
+    t.string "phone"
+    t.string "sex"
+    t.string "beardth_date"
+    t.string "other_date"
+    t.integer "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_piples_on_customer_id"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -52,5 +75,6 @@ ActiveRecord::Schema.define(version: 2021_12_07_175715) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "piples", "customers"
   add_foreign_key "purchases", "customers"
 end

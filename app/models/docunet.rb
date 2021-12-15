@@ -1,0 +1,2 @@
+class Docunet < ApplicationRecord
+end
