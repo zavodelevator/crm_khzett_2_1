@@ -1,0 +1,13 @@
+<h2>Purchases</h2>
+
+  <% @purchases.each do |purchase| %>
+    
+    <time datetime= "<% purchase.formated_created_at %>">
+      <%= purchase.formated_created_at %>
+    </time>
+
+    <p>
+      <%= purchase.name_product%>
+    </p>
+
+  <% end %>

@@ -2,7 +2,8 @@
 
 one:
   name_product: MyString
-  count_price_params: MyString
+  count: MyString
+  _price: MyString
   stage_buy: MyString
   stage_in_corp: MyString
   plus_info: MyString
@@ -10,7 +11,8 @@ one:
 
 two:
   name_product: MyString
-  count_price_params: MyString
+  count: MyString
+  _price: MyString
   stage_buy: MyString
   stage_in_corp: MyString
   plus_info: MyString

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_081632) do
+ActiveRecord::Schema.define(version: 2021_12_17_073047) do
 
   create_table "customers", force: :cascade do |t|
     t.string "customer_name"
@@ -52,7 +52,8 @@ ActiveRecord::Schema.define(version: 2021_12_15_081632) do
 
   create_table "purchases", force: :cascade do |t|
     t.string "name_product"
-    t.string "count_price_params"
+    t.string "count"
+    t.string "_price"
     t.string "stage_buy"
     t.string "stage_in_corp"
     t.string "plus_info"
