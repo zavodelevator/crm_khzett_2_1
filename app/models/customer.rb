@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
     belongs_to :user
     has_many :purchases
     has_many :piples
+    has_many :conracts
     
 
     def formated_created_at

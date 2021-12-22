@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  
   resources :contracts
   resources :docunets
+  
   resources :piples
   devise_for :users
+
   resources :customers do 
     resources :purchases
   end

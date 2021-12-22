@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contragent_name: MyString
+  data_time: MyString
+  number: MyString
+  note: MyString
+  customer: one
+
+two:
+  contragent_name: MyString
+  data_time: MyString
+  number: MyString
+  note: MyString
+  customer: two
