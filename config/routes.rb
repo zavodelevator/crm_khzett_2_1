@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :contracts
   resources :docunets
   
   resources :piples
@@ -8,7 +7,9 @@ Rails.application.routes.draw do
 
   resources :customers do 
     resources :purchases
+    resources :contracts
   end
+  
   # get 'home/index'
   get 'home/about'
   root "home#index"

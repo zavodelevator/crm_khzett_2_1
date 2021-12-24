@@ -29,4 +29,26 @@ $ rails g scaffold Contract contragent_name:string data_time:string number:strin
       ?????    rails g scaffold Docunet name_document:string :string customer:belongs_to
 
 $ rails console
+      q = Customer.first
+      q = Customer.first.inspect
+      Customer.all
+
+
+
 $ Customer.attribute_names
+
+
+lasson 5 
+      - roud to 404 if dont exists page
+      - work from database in rails console 9:00
+            $ rails console
+                  q = Customer.first
+                  q = Customer.first.inspect
+                  Customer.all
+                  q.purchases.build name_product "screw spiral"
+                  resources :contracts
+                  Purchases.all
+
+      - build relationship between models one has many 10:00
+          /rails/info/routes   page from info routes
+      -
