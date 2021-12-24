@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
   
-  resources :docunets
   
-  resources :piples
   devise_for :users
 
   resources :customers do 
-    resources :purchases
-    resources :contracts
-  end
+      end
   
   # get 'home/index'
   get 'home/about'

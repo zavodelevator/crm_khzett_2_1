@@ -1,2 +1,0 @@
-class Docunet < ApplicationRecord
-end
